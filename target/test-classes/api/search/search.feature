@@ -1,46 +1,22 @@
-Feature: sample karate test script
-  for help, see: https://github.com/intuit/karate/wiki/IDE-Support
+Feature: API Automation
 
   Background:
-    * url 'https://jsonplaceholder.typicode.com'
+    * url baseUrl
 
-  Scenario: get all users and then get the first user by id
-    Given path 'users'
-    When method get
+  Scenario: Search Using Query
+
+    Given path '/skillacademy/discovery/search'
+    And param searchQuery = queryKeyword
+    When method GET
     Then status 200
+    And match response == '#object'
+    And match response.data == '#object'
+    And match response.status == '#string'
+    And match response.message == '#string'
+    And match response.status == 'success'
+    And match response.message == 'success'
 
-    * def first = response[0]
-
-    Given path 'users', first.id
-    When method get
-    Then status 200
-
-  Scenario: create a user and then get it by id
-    * def user =
-      """
-      {
-        "name": "Test User",
-        "username": "testuser",
-        "email": "test@user.com",
-        "address": {
-          "street": "Has No Name",
-          "suite": "Apt. 123",
-          "city": "Electri",
-          "zipcode": "54321-6789"
-        }
-      }
-      """
-
-    Given url 'https://jsonplaceholder.typicode.com/users'
-    And request user
-    When method post
-    Then status 201
-
-    * def id = response.id
-    * print 'created id is: ', id
-
-    Given path id
-    # When method get
-    # Then status 200
-    # And match response contains user
-  
+    And match response.data.data == '#array'
+    And match each response.data.data[*] == '#object'
+    And match each response.data.data[*].courseName == '#string'
+#    And match each response.data.data[*].courseDescription contains queryKeyword

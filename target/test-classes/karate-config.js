@@ -6,7 +6,8 @@ function fn() {
   }
   var config = {
     env: env,
-    myVarName: 'someValue'
+    baseUrl: 'https://skillacademy.com',
+    queryKeyword: 'Jave'
   }
   if (env == 'dev') {
     // customize
