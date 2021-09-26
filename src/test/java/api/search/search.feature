@@ -99,8 +99,6 @@ Scenario: pageSize
     And match response.message == 'success'
     And match response.data.data == '#array'
 
-    And match response.data.data[*] == '#object'
-
   Scenario: Sort By
     * def sortBy = 'total_rating'
 
@@ -117,4 +115,4 @@ Scenario: pageSize
     And match response.message == 'success'
     And match response.data.data == '#array'
 
-    And match response.data.data[*] = '#object'
+    # And match response.data.data[*] = '#object'

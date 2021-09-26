@@ -1,6 +1,26 @@
-21:06:47.321 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-21:06:48.931 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
-21:06:49.384 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+21:15:01.764 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:15:02.876 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: null 
+21:15:02.876 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+21:15:02.877 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+21:15:02.877 [pool-1-thread-5] INFO  com.intuit.karate - karate.env system property was: null 
+21:15:02.876 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+21:15:03.300 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > GET https://skillacademy.com/skillacademy/discovery/search?searchQuery=Jave&pageSize=2&page=1
+1 > Host: skillacademy.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_191)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:15:03.301 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://skillacademy.com/skillacademy/discovery/search?searchQuery=Jave&minPrice=150000&maxPrice=200000
+1 > Host: skillacademy.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_191)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:15:03.301 [pool-1-thread-1] DEBUG com.intuit.karate - request:
 1 > GET https://skillacademy.com/skillacademy/discovery/search?searchQuery=Jave
 1 > Host: skillacademy.com
 1 > Connection: Keep-Alive
@@ -8,9 +28,25 @@
 1 > Accept-Encoding: gzip,deflate
 
 
-21:06:50.924 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1536
+21:15:03.301 [pool-1-thread-5] DEBUG com.intuit.karate - request:
+1 > GET https://skillacademy.com/skillacademy/discovery/search?minDuration=1&searchQuery=Jave&maxDuration=2
+1 > Host: skillacademy.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_191)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:15:03.302 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://skillacademy.com/skillacademy/discovery/search?searchQuery=Jave&pageSize=2&page=1
+1 > Host: skillacademy.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_191)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:15:04.826 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 1522
 1 < 200
-1 < Date: Sun, 26 Sep 2021 14:06:50 GMT
+1 < Date: Sun, 26 Sep 2021 14:15:04 GMT
 1 < Content-Type: application/json
 1 < Transfer-Encoding: chunked
 1 < Connection: keep-alive
@@ -21,6 +57,90 @@
 1 < CF-Cache-Status: DYNAMIC
 1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
 1 < Server: cloudflare
-1 < CF-RAY: 694d0e1f7ba818ba-SIN
+1 < CF-RAY: 694d1a2e7ed44a83-SIN
+{"data":{"data":[],"page":1,"pageSize":2,"recommendationID":"v0","searchAlgoID":"v3","totalCourse":0,"totalPage":0},"status":"success","message":"success"}
+21:15:04.828 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 1525
+1 < 200
+1 < Date: Sun, 26 Sep 2021 14:15:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-frame-options: DENY
+1 < grpc-metadata-content-type: application/grpc
+1 < vary: Origin, Origin
+1 < access-control-allow-origin: *
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Server: cloudflare
+1 < CF-RAY: 694d1a2e7988dcda-SIN
+{"data":{"data":[],"page":1,"pageSize":2,"recommendationID":"v0","searchAlgoID":"v3","totalCourse":0,"totalPage":0},"status":"success","message":"success"}
+21:15:04.828 [pool-1-thread-5] DEBUG com.intuit.karate - response time in milliseconds: 1526
+1 < 200
+1 < Date: Sun, 26 Sep 2021 14:15:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-frame-options: DENY
+1 < grpc-metadata-content-type: application/grpc
+1 < vary: Origin, Origin
+1 < access-control-allow-origin: *
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Server: cloudflare
+1 < CF-RAY: 694d1a2e8e6146f1-SIN
 {"data":{"data":[],"page":1,"pageSize":10,"recommendationID":"v0","searchAlgoID":"v3","totalCourse":0,"totalPage":0},"status":"success","message":"success"}
-21:06:51.810 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:api/search/search.feature
+21:15:04.839 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1538
+1 < 200
+1 < Date: Sun, 26 Sep 2021 14:15:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-frame-options: DENY
+1 < grpc-metadata-content-type: application/grpc
+1 < vary: Origin, Origin
+1 < access-control-allow-origin: *
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Server: cloudflare
+1 < CF-RAY: 694d1a2e7dcf46df-SIN
+{"data":{"data":[],"page":1,"pageSize":10,"recommendationID":"v0","searchAlgoID":"v3","totalCourse":0,"totalPage":0},"status":"success","message":"success"}
+21:15:04.936 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+21:15:04.946 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://skillacademy.com/skillacademy/discovery/search?searchQuery=Jave&sortBy=total_rating
+1 > Host: skillacademy.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_191)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:15:05.009 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 1708
+1 < 200
+1 < Date: Sun, 26 Sep 2021 14:15:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-frame-options: DENY
+1 < grpc-metadata-content-type: application/grpc
+1 < vary: Origin, Origin
+1 < access-control-allow-origin: *
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Server: cloudflare
+1 < CF-RAY: 694d1a2e78954a02-SIN
+{"data":{"data":[],"page":1,"pageSize":10,"recommendationID":"v0","searchAlgoID":"v3","totalCourse":0,"totalPage":0},"status":"success","message":"success"}
+21:15:05.159 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 213
+1 < 200
+1 < Date: Sun, 26 Sep 2021 14:15:05 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-frame-options: DENY
+1 < grpc-metadata-content-type: application/grpc
+1 < vary: Origin, Origin
+1 < access-control-allow-origin: *
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Server: cloudflare
+1 < CF-RAY: 694d1a3068e7468b-SIN
+{"data":{"data":[],"page":1,"pageSize":10,"recommendationID":"v0","searchAlgoID":"v3","totalCourse":0,"totalPage":0},"status":"success","message":"success"}
+21:15:06.164 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:api/search/search.feature
