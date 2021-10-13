@@ -1,4 +1,4 @@
-# ruangguru-api-test
+# api-test
 API Automation using Karate Framework
 ### Prerequisite
 * Configure maven on your machine
